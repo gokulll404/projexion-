@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+.login-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    left: 774px;
+    top: 183px;
+}
+
+.header {
+    text-align: left;
+
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    color: #232323;
+    text-align: left;
+
+}
+
+.header p {
+
+    opacity: 0.85;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #6E6E6E;
+    position: relative;
+    bottom: 4px;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 14px;
+
+    width: 399px;
+    height: 282px;
+
+
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+}
+
+
+
+.input-fields {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    width: 399px;
+    height: 72px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+
+label {
+
+
+    width: 53px;
+    height: 18px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    /* or 18px */
+
+    color: #232529;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+
+.input {
+    /* Frame 1171277093 */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+
+    width: 346px;
+    height: 48px;
+
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+
+.login-btn {
+    /* button */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 8px;
+    gap: 8px;
+
+    width: 346px;
+    height: 49px;
+    background: #1A73E8;
+    border-radius: 10px;
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+    color: white;
+    outline: none;
+    box-shadow: none;
+
+
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -1%;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------
+   1) Large Tablets (max-width: 1024px)
+------------------------------------ */
+@media (max-width: 1024px) {
+
+    .banner-img {
+        width: 480px;
+        height: auto;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 20px;
+    }
+
+    .login-sec {
+        left: auto;
+        top: auto;
+        position: relative;
+        margin-left: 40px;
+    }
+
+    .forms {
+        width: 350px;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* -----------------------------------
+   2) Small Tablets (max-width: 768px)
+------------------------------------ */
+@media (max-width: 768px) {
+
+    .login-sec {
+        align-items: center;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .forms,
+    .input-fields {
+        width: 100%;
+        align-items: center;
+    }
+
+    .input {
+        width: 85%;
+    }
+
+    button {
+        width: 85%;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+}
+
+/* -----------------------------------
+   3) Mobile Phones (max-width: 480px)
+------------------------------------ */
+@media (max-width: 480px) {
+
+    .banner-img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .login-sec {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .forms,
+    .input-fields {
+        width: 100%;
+    }
+
+    .input {
+        width: 100%;
+        padding: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+    }
+}
