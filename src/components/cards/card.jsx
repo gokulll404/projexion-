@@ -4,7 +4,8 @@ import Internal from '../../assets/images/cardsicon/internal.svg'
 import Running from '../../assets/images/cardsicon/running.svg'
 import '../cards/card.css'
 
-const card = () => {
+const card = ({ onOpenCreate }) => {
+
     return (
         <div className='card'>
             <div className="card-section">
@@ -33,7 +34,7 @@ const card = () => {
                 </div>
             </div>
             <div className="button">
-                <button className='create-btn'>+ Create Project</button>
+                <button className='create-btn' onClick={onOpenCreate}>+ Create Project</button>
             </div>
         </div>
     )

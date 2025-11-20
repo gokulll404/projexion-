@@ -3,14 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .text-field {
-
     text-align: center;
     margin-top:30px;
 }
 
 
-p {
-
+.home-text {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -18,16 +16,13 @@ p {
     color: #242424;
     position: relative;
     top: 13px;
-
 }
 
-h1 {
-
+.home-header {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
     font-size: 25px;
     text-align: center;
     color: #131415;
-
 }

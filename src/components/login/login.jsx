@@ -8,7 +8,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const defaultEmail = "admin@gmail.com";
-    const defaultPassword = "123456";
+    const defaultPassword = "123456" ;
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

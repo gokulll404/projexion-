@@ -164,9 +164,9 @@
     padding: 6px 16px;
     background: #1a73e8;
     color: #fff;
-
-    font-size: 14px;
-    font-weight: 400;
+    font-family: 'inter';
+    font-size: 13px;
+    font-weight: 300;
     border-radius: 8px;
     border: none;
 
