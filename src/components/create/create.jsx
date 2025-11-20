@@ -3,19 +3,19 @@ import Close from '../../assets/images/icons/closeicon.svg'
 import '../create/create.css'
 import Arrow from '../../assets/images/icons/arrowicon.svg'
 
-const create = ({onClose}) => {
+const create = ({ onClose }) => {
   return (
     <div className='create-container'>
       <div className="create-tab">
         <div className="header">
           <h1>Create Project</h1>
           <img
-          src={Close}
-          alt="close"
-          className="close-icon"
-          onClick={onClose}
-          style={{ cursor: "pointer" }}
-        />
+            src={Close}
+            alt="close"
+            className="close-icon"
+            onClick={onClose}
+            style={{ cursor: "pointer" }}
+          />
         </div>
         <div className="create-project-container">
 
@@ -79,6 +79,14 @@ const create = ({onClose}) => {
             </div>
           </div>
 
+        </div>
+        <div className="create-btn-section">
+          <div className="create-btn-container">
+            <div className="create-btn-tab">
+              <button className='create-btn-2'>Submit</button>
+              <button className='create-btn-2'>Cancel</button>
+            </div>
+          </div>
         </div>
 
       </div>

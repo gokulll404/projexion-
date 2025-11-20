@@ -91,27 +91,12 @@
     flex-grow: 0;
 }
 
-
-
 .card-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .running-projects {
     display: flex;
@@ -144,16 +129,6 @@
     font-weight: 600;
     margin: 0;
 }
-
-
- 
-
-  
-
-
-
-
-
 
 .create-btn {
     display: flex;
