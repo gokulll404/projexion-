@@ -1,0 +1,178 @@
+.projects-container {
+    width: 96%;
+    background: #f3f3f3;
+    border-radius: 14px;
+    padding: 25px;
+    font-family: 'Inter';
+    border: 1px solid #e4e4e4;
+}
+
+.projects-container {
+    
+
+    position: absolute;
+    width: 1058px;
+    height: 304px;
+    left: 118px;
+    top: 227px;
+
+    background: #FFFFFF;
+    border: 1px solid #E4E8EB;
+    border-radius: 12px;
+
+}
+
+.projects-container h2{
+
+}
+
+.subtitle {
+    color: #666;
+    position: absolute;
+}
+
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f1f1f1;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+}
+
+.filter-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    background: #f8f9fa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Table */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-table th {
+    text-align: left;
+    background: #fafafa;
+    padding: 12px;
+    border-bottom: 1px solid #e4e4e4;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+}
+
+.project-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+/* Sort Icons */
+.sort-icons {
+    font-size: 10px;
+    margin-left: 8px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* Status Badge */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status.pending {
+    background: #f4e4c3;
+    color: #a0722b;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.pagination input {
+    width: 40px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+
+.page-controls {
+    margin-left: auto;
+    display: flex;
+    gap: 6px;
+}
+
+.page-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+}
+
+.page-btn.active {
+    background: #0066ff;
+    color: white;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Table Borders Between Each Column */
+.project-table th,
+.project-table td {
+    border-right: 1px solid #e4e4e4;
+}
+
+.project-table th:last-child,
+.project-table td:last-child {
+    border-right: none;
+    /* No border at the end */
+}
