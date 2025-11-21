@@ -38,6 +38,7 @@ const Create = ({ onClose }) => {
     );
 
     alert("Project added to Redux!");
+    onClose(); 
   };
 
   const handleCancel = () => {
