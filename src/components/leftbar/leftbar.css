@@ -78,18 +78,15 @@
 
 
 
-.menu-item {
-  padding: 14px;
+
+.menu-icon {
+  width: 32px;
+  padding: 10px;
   border-radius: 12px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
-.menu-item:hover {
-  background: #f0f0f016; /* Light hover */
-}
-
-.menu-item.active {
-  background: #483AA0;   /* Your highlight color */
-  border-radius: 12px;
+.menu-icon.active {
+  background-color: rgb(26, 115, 232); /* active color */
 }

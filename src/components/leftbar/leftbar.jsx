@@ -1,38 +1,60 @@
-import React from 'react'
+import React, { useState } from "react";
 import '../leftbar/leftbar.css'
 
-// icons
-import Logo from '../../assets/images/logo2.svg'
 import Dashicon from '../../assets/images/icons/dashicon.svg?react'
 import Contenticon from '../../assets/images/icons/contenticon.svg'
 import Settings from '../../assets/images/icons/settings.svg'
 import Bell from '../../assets/images/icons/bellicon.svg'
 import Avatar from '../../assets/images/icons/avatar.svg'
+import Logo from '../../assets/images/logo2.svg'
 
 const Leftbar = () => {
+
+  const [active, setActive] = useState("dashboard");
+
   return (
     <div className='leftbar'>
       <div className="logo">
-        <img src={Logo} alt="" className='logo-icon' />
+        <img src={Logo} className='logo-icon' />
       </div>
 
       <div className="menus">
+        
         <div className="top-menu">
-          <Dashicon className="menu-icon dash-icon" />
-          <br />
-          <img src={Contenticon} alt="" className='menu-icon' />
-          <br />
-          <img src={Settings} alt="" className='menu-icon' />
+          <Dashicon
+            className={`menu-icon ${active === "dashboard" ? "active" : ""}`}
+            onClick={() => setActive("dashboard")}
+          />
+
+          <img
+            src={Contenticon}
+            className={`menu-icon ${active === "content" ? "active" : ""}`}
+            onClick={() => setActive("content")}
+          />
+
+          <img
+            src={Settings}
+            className={`menu-icon ${active === "settings" ? "active" : ""}`}
+            onClick={() => setActive("settings")}
+          />
         </div>
 
         <div className="bottom-menu">
-          <img src={Bell} alt="" className='menu-icon' />
-          <br />
-          <img src={Avatar} alt="" className='menu-icon' />
+          <img
+            src={Bell}
+            className={`menu-icon ${active === "bell" ? "active" : ""}`}
+            onClick={() => setActive("bell")}
+          />
+
+          <img
+            src={Avatar}
+            className={`menu-icon ${active === "avatar" ? "active" : ""}`}
+            onClick={() => setActive("avatar")}
+          />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Leftbar
+export default Leftbar;

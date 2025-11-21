@@ -61,8 +61,8 @@ const Login = () => {
                     />
                 </div>
 
-                <div className="checkbox">
-                    <input type="checkbox" />
+                <div className="login-checkbox">
+                    <input type="checkbox" className='login-check'/>
                     <label className='remember'>Remember me</label>
                 </div>
 

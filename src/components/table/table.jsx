@@ -1,6 +1,12 @@
-import React from "react";
+
 import "../table/table.css";
 import { useSelector } from "react-redux";
+import Search from '../../assets/images/icons/search.svg'
+import Filter from '../../assets/images/icons/filter.svg'
+import TableArrow from '../../assets/images/icons/tablearrow.svg'
+import Leftarrow from '../../assets/images/icons/leftarrow.svg'
+import Rightarrow from '../../assets/images/icons/rightarrow.svg'
+
 
 const table = () => {
   const projects = useSelector((state) => state.projects?.list || []);
@@ -8,17 +14,18 @@ const table = () => {
   return (
     <div className="projects-container">
       <h2>Projects</h2>
-      <p className="subtitle">All projects</p>
 
       <div className="top-bar">
+        <p className="subtitle">All projects</p>
         <div className="search-box">
-          <span className="icon">🔍</span>
+           <img className="icon" src={Search} alt="" />
           <input type="text" placeholder="Search" />
         </div>
 
         <button className="filter-btn">
-          <span className="icon">⚙️</span> Filter
+          <img className="icon" src={Filter} alt="" />Filter
         </button>
+         <div className="table-bottom-line"></div>
       </div>
 
       <div className="table-wrapper">
@@ -26,14 +33,14 @@ const table = () => {
 
           <thead>
             <tr>
-              <th>Project Id <span className="sort-icons">▲▼</span></th>
-              <th>Project Name <span className="sort-icons">▲▼</span></th>
-              <th>Status <span className="sort-icons">▲▼</span></th>
-              <th>Estimated budget <span className="sort-icons">▲▼</span></th>
-              <th>Project owner <span className="sort-icons">▲▼</span></th>
-              <th>Complexity <span className="sort-icons">▲▼</span></th>
-              <th>Project start date <span className="sort-icons">▲▼</span></th>
-              <th>Project end date <span className="sort-icons">▲▼</span></th>
+              <th>Project Id <img className="sort-icons" src={TableArrow} alt="" /></th>
+              <th>Project Name <img className="sort-icons" src={TableArrow} alt="" /></th>
+              <th>Status <img className="sort-icons" src={TableArrow} alt="" /></th>
+              <th>Estimated budget <img className="sort-icons" src={TableArrow} alt="" /></th>
+              <th>Project owner <img className="sort-icons" src={TableArrow} alt="" /></th>
+              <th>Complexity <img className="sort-icons" src={TableArrow} alt="" /></th>
+              <th>Project start date <img className="sort-icons" src={TableArrow} alt="" /></th>
+              <th>Project end date <img className="sort-icons" src={TableArrow} alt="" /></th>
             </tr>
           </thead>
 
@@ -71,9 +78,9 @@ const table = () => {
         <span>of 1</span>
 
         <div className="page-controls">
-          <button className="page-btn">&#8592;</button>
+          <button className="page-btn"><img src={Leftarrow} alt="" /></button>
           <button className="page-btn active">1</button>
-          <button className="page-btn">&#8594;</button>
+          <button className="page-btn"><img src={Rightarrow} alt="" /></button>
         </div>
       </div>
 

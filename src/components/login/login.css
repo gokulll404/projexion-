@@ -76,6 +76,7 @@
     order: 0;
     align-self: stretch;
     flex-grow: 0;
+    white-space: nowrap;
 
 }
 
@@ -174,7 +175,21 @@ label {
 
 
 
+.login-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
 
+.login-check {
+  margin: 0;
+}
+
+.login-checkbox label {
+  display: inline-flex;
+  align-items: center;
+}
 
 
 

@@ -190,3 +190,12 @@ input::placeholder {
 .create-btn-2:hover {
     opacity: 0.85;
 }
+
+
+
+
+.antd-date {
+    width: 150%;
+    border-radius: 8px;
+    height: 42px;}
+    

@@ -4,6 +4,7 @@ import Arrow from '../../assets/images/icons/arrowicon.svg'
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProject } from "../../reudx/projectslice";
+import { DatePicker } from "antd";
 
 const Create = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -39,6 +40,18 @@ const Create = ({ onClose }) => {
     alert("Project added to Redux!");
   };
 
+  const handleCancel = () => {
+    setProjectCode("");
+    setProjectName("");
+    setProjectStatus("Pending");
+    setProjectType("Client");
+    setProjectOwner("");
+    setEstimatedBudget("");
+    setProjectComplexity("");
+    setStartDate("");
+    setEndDate("");
+  };
+
   return (
     <div className='create-container'>
       <div className="create-tab">
@@ -57,8 +70,8 @@ const Create = ({ onClose }) => {
 
           <div className="form-group">
             <label>Project code</label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Enter project code"
               value={projectCode}
               onChange={(e) => setProjectCode(e.target.value)}
@@ -67,8 +80,8 @@ const Create = ({ onClose }) => {
 
           <div className="form-group">
             <label>Project name</label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Enter project name"
               value={projectName}
               onChange={(e) => setProjectName(e.target.value)}
@@ -77,8 +90,8 @@ const Create = ({ onClose }) => {
 
           <div className="form-group">
             <label>Project status</label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Enter project status"
               value={projectStatus}
               onChange={(e) => setProjectStatus(e.target.value)}
@@ -88,7 +101,7 @@ const Create = ({ onClose }) => {
           <div className="form-group">
             <label>Project type</label>
             <div className="select-box">
-              <select 
+              <select
                 value={projectType}
                 onChange={(e) => setProjectType(e.target.value)}
               >
@@ -101,8 +114,8 @@ const Create = ({ onClose }) => {
 
           <div className="form-group">
             <label>Project owner</label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Enter the project owner"
               value={projectOwner}
               onChange={(e) => setProjectOwner(e.target.value)}
@@ -113,8 +126,8 @@ const Create = ({ onClose }) => {
             <label>Estimated budget</label>
             <div className="budget-box">
               <div className="currency">$</div>
-              <input 
-                type="number" 
+              <input
+                type="number"
                 placeholder="Enter amount"
                 value={estimatedBudget}
                 onChange={(e) => setEstimatedBudget(e.target.value)}
@@ -124,8 +137,8 @@ const Create = ({ onClose }) => {
 
           <div className="form-group">
             <label>Project complexity</label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Enter the project complexity"
               value={projectComplexity}
               onChange={(e) => setProjectComplexity(e.target.value)}
@@ -135,26 +148,21 @@ const Create = ({ onClose }) => {
           <div className="form-group">
             <label>Estimated project start date</label>
             <div className="date-box">
-              <input 
-                type="text" 
-                placeholder="DD/MM/YYYY"
-                value={startDate}
-                onChange={(e) => setStartDate(e.target.value)}
+              <DatePicker
+                format="DD/MM/YYYY"
+                onChange={(date, dateString) => setStartDate(dateString)}
+                className="antd-date"
               />
-              <span className="calendar">📅</span>
             </div>
           </div>
-
           <div className="form-group">
             <label>Estimated project end date</label>
             <div className="date-box">
-              <input 
-                type="text" 
-                placeholder="DD/MM/YYYY"
-                value={endDate}
-                onChange={(e) => setEndDate(e.target.value)}
+              <DatePicker
+                format="DD/MM/YYYY"
+                onChange={(date, dateString) => setEndDate(dateString)}
+                className="antd-date"
               />
-              <span className="calendar">📅</span>
             </div>
           </div>
 
@@ -164,7 +172,7 @@ const Create = ({ onClose }) => {
           <div className="create-btn-container">
             <div className="create-btn-tab">
               <button className='create-btn-2' onClick={handleSubmit}>Submit</button>
-              <button className='create-btn-2' onClick={onClose}>Cancel</button>
+              <button className='create-btn-2' onClick={handleCancel}>Cancel</button>
             </div>
           </div>
         </div>
