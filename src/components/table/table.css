@@ -29,7 +29,7 @@
 .projects-container p {
     font-size: 14px;
     position: relative;
-    right: 657px;
+    right: 527px;
 }
 
 .subtitle {
@@ -185,3 +185,56 @@
     /* No border at the end */
 }
 
+
+
+
+
+
+
+
+
+
+/* rotate arrow when sorting */
+.sort-icons.asc {
+    transform: rotate(180deg);
+    transition: transform .18s ease;
+    opacity: 1;
+}
+
+.sort-icons.desc {
+    transform: rotate(0deg);
+    transition: transform .18s ease;
+    opacity: 1;
+}
+
+.sort-icons {
+    opacity: 0.55;
+    margin-left: 6px;
+    width: 12px;
+    height: 12px;
+}
+
+/* export button simple style */
+.export-btn {
+    background: rgb(26, 115, 232);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 106px;
+    height: 38px;
+
+}
+
+/* align the search+export nicely (adjust to your layout) */
+.top-bar .search-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-bar .export-btn {
+    margin-left: 12px;
+}

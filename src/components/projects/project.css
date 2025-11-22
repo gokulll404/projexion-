@@ -178,3 +178,26 @@
     background: url(../../assets/images/activetab.svg);
     border-radius: 10px;
 }
+
+
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.page-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.page-btn.active {
+  background: #4A3AFF;
+  color: white;
+  border-color: #4A3AFF;
+}

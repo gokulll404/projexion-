@@ -5,10 +5,10 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProject } from "../../reudx/projectslice";
 import { DatePicker } from "antd";
+import Alertmodal from '../../components/alertmodal/alertmodal'
 
-const Create = ({ onClose }) => {
+const Create = ({ onClose, pushToast }) => {
   const dispatch = useDispatch();
-
 
   const [projectCode, setProjectCode] = useState("");
   const [projectName, setProjectName] = useState("");
@@ -20,9 +20,28 @@ const Create = ({ onClose }) => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
 
+  const [showModal, setShowModal] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // REQUIRED FIELD CHECK
+    if (
+      !projectCode.trim() ||
+      !projectName.trim() ||
+      !projectStatus.trim() ||
+      !projectType.trim() ||
+      !projectOwner.trim() ||
+      !estimatedBudget.toString().trim() ||
+      !projectComplexity.trim() ||
+      !startDate.trim() ||
+      !endDate.trim()
+    ) {
+      pushToast("error");   // show error toast
+      return;               // stop submit, keep modal open
+    }
+
+    // SUCCESS
     dispatch(
       addProject({
         projectCode,
@@ -37,9 +56,10 @@ const Create = ({ onClose }) => {
       })
     );
 
-    alert("Project added to Redux!");
-    onClose();
+    pushToast("success");    // show success toast
+    onClose();               // close modal
   };
+
 
   const handleCancel = () => {
     setProjectCode("");
@@ -51,6 +71,14 @@ const Create = ({ onClose }) => {
     setProjectComplexity("");
     setStartDate("");
     setEndDate("");
+  };
+
+  const handleClose = () => {
+    setShowModal(false);
+  };
+
+  const handleBack = () => {
+    setShowModal(false);
   };
 
   return (
@@ -91,13 +119,18 @@ const Create = ({ onClose }) => {
             </div>
 
             <div className="form-group">
-              <label>Project status</label>
-              <input
-                type="text"
-                placeholder="Enter project status"
-                value={projectStatus}
-                onChange={(e) => setProjectStatus(e.target.value)}
-              />
+                <label>Project status</label>
+              <div className="select-box">
+                <select
+                  value={projectStatus}
+                  onChange={(e) => setProjectStatus(e.target.value)}
+                  className="status-select"
+                >
+                  <option value="Pending">Pending</option>
+                  <option value="Escalated">Escalated</option>
+                  <option value="Completed">Completed</option>
+                </select>
+              </div>
             </div>
 
             <div className="form-group">
@@ -157,6 +190,7 @@ const Create = ({ onClose }) => {
                 />
               </div>
             </div>
+
             <div className="form-group">
               <label>Estimated project end date</label>
               <div className="date-box">
@@ -174,13 +208,20 @@ const Create = ({ onClose }) => {
             <div className="create-btn-container">
               <div className="create-btn-tab">
                 <button className='create-btn-2' onClick={handleSubmit}>Submit</button>
-                <button className='create-btn-2' onClick={handleCancel}>Cancel</button>
+                <button className='create-btn-2' onClick={() => setShowModal(true)}>Cancel</button>
               </div>
             </div>
           </div>
 
         </div>
       </div>
+      {showModal && (
+        <Alertmodal
+          onClose={handleClose}
+          onBack={handleBack}
+          onCancelData={handleCancel}   // 👈 ADD THIS
+        />
+      )}
     </div>
   );
 };
